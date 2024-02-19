@@ -19,5 +19,26 @@ public void prepend( Integer data) {
  Node temp = header.next;
  header.next=n;
  n.next=temp;
- size++; }  } }
+ size++; }  } 
+
+ public int getSize() {
+ return size; }
+ public String toString() {
+ Node n = header.next;
+ String temp = "" ;
+ while(n!= null) {
+ temp  = temp + n.data + " ";
+ n=n.next;
+ }
+ return temp; } }
+ public class main {
+ public static void main(String args[]) {
+ LinkedList list = new LinkedList();
+  list.prepend(1);
+  list.prepend(2);
+  list.prepend(3);
+  list.prepend(4);
+  System.out.println(list);
+  System.out.println(list.getSize);
+  } }
  
