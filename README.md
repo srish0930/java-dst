@@ -42,6 +42,13 @@ Node n = new Node(data);
  n=n.next;
  }
  return temp; } }
+
+//removefirst
+public void removeFirst() {
+if{size!=0){
+header.next=header.next.next;
+size--; } }
+
  public class main {
  public static void main(String args[]) {
  LinkedList list = new LinkedList();
