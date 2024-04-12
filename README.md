@@ -49,6 +49,23 @@ if{size!=0){
 header.next=header.next.next;
 size--; } }
 
+public void removeLast() {
+if(size == 1) 
+header.next = null;
+lastnode=header;
+size--;
+else if (size!=0) {
+node n = header.next;
+int count=1;
+while(count!= size-1)
+n=n.next;
+count++;
+}
+lastnode = n;
+lastnode.next=null;
+size--;
+}
+
  public class main {
  public static void main(String args[]) {
  LinkedList list = new LinkedList();
@@ -61,5 +78,13 @@ size--; } }
   list.append(7);
   System.out.println(list);
   System.out.println(list.getSize);
+  list.removeFirst();
+  list.removeFirst();
+  System.out.println(list);
+  list.removeLast();
+  list.removeLast();
+  System.out.println(list);
   } }
+
+
  
